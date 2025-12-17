@@ -1,0 +1,295 @@
+.timezone {
+  position: relative;
+}
+
+body {
+  background-color: rgb(34, 36, 40);
+}
+
+p,
+h6,
+h3 {
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+  z-index: 9999;
+  background-color: rgb(34, 36, 40);
+  padding: 5px 5px;
+  border-radius: 10px;
+  max-width: 30%;
+  min-width: 200px;
+  color: rgb(34, 36, 40);
+}
+
+.search {
+  font-size: 14px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid rgba(76, 80, 88, 0);
+  background-color: rgb(76, 80, 88);
+  color: #fff;
+}
+
+.search:focus {
+  border-color: rgb(76, 80, 88);
+  outline: none;
+}
+
+.output-container {
+  text-align: left;
+  margin-top: 8px;
+}
+
+.output-container button {
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
+
+  width: 100%;
+  background: rgb(76, 80, 88);
+  border: 1px solid rgb(76, 80, 88);
+  color: white;
+}
+
+.output-container button:hover {
+  opacity: 0.8;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 80%;
+
+  margin-left: 1%;
+  margin-right: 1%;
+
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  gap: 1em;
+  height: 80%;
+  max-height: 90%;
+  width: auto;
+}
+
+/*For the 20 Percent design for the realtime data of the place
+  Name
+  Picture
+  Weather value
+  */
+.realtime-container {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  row-gap: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: solid;
+  border-color: white;
+  max-width: 250px;
+  max-height: 550px;
+
+  /*design*/
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+/*Name location*/
+.name-realtime-weather {
+  text-align: center;
+  max-height: 100px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.name-realtime-weather h3 {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+}
+
+.name-realtime-weather p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*Picture location*/
+.current-time-weather {
+  border: solid;
+  grid-template-rows: 1fr 2fr 1fr;
+  max-height: 400px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.icon-container {
+  padding-top: 2px;
+}
+
+.weather-current {
+  padding-left: 5px;
+}
+
+.weather-current p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.button-view {
+  margin-top: 50px;
+  padding: 6px 12px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+/*For the hour to hour data values
+  contains 
+  7 buttons
+  6 like the realtime container layout 
+  Name
+  Picture
+  Weather value
+  */
+.grid-secondary-container {
+  margin-right: 20px;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  row-gap: 10px;
+  height: auto;
+  width: auto;
+}
+
+.day {
+  text-align: center;
+}
+
+.buttons {
+  padding-left: 10px;
+  padding-right: 10px;
+  align-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+  height: auto;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+
+.buttons p {
+  font-size: 11px;
+}
+
+.button-style {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(107, 107, 107);
+  height: 100%;
+  box-sizing: border-box;
+  width: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.button-style img {
+  max-height: 75px;
+  max-width: 75px;
+}
+
+.button-style h6 {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button-style p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+}
+
+.dayandinfo {
+  display: grid;
+  grid-template-rows: 25px 1fr;
+}
+
+.dayandinfo h3 {
+  text-align: center;
+}
+/* Design for hourbyhour show values of the data weather */
+.hourbyhour {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1em;
+  padding: 10px;
+  align-self: center;
+  max-height: 300px;
+  width: auto;
+  overflow-y: auto;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+
+.hourbyhour-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+.hourbyhouricon {
+  align-items: center;
+}
+
+.values {
+  align-items: center;
+}
+
+.realtime-container,
+.current-time-weather,
+.buttons,
+.hourbyhour {
+  background: rgba(255, 255, 255, 0.08);
+}
